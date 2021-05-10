@@ -93,7 +93,7 @@ DEFAULT vesamenu.c32
                         LABEL server kickstarted
                                 MENU LABEL ^Install Fedora 33 ( Kickstarted )
                                 kernel ::boot/amd64/fedora/33/isolinux/vmlinuz
-                                append initrd=::boot/amd64/fedora/33/isolinux/initrd.img inst.cmdline ip=dhcp inst.repo=nfs:192.168.2.202:/export/boot/amd64/fedora/33 inst.stage2=nfs:192.168.2.202:/export/boot/amd64/fedora/33 inst.ks=nsf:192.168.2.202:/export/boot/amd64/fedora/33:/ks/
+                                append initrd=::boot/amd64/fedora/33/isolinux/initrd.img inst.cmdline ip=dhcp inst.repo=nfs:192.168.X.X:/export/boot/amd64/fedora/33 inst.stage2=nfs:192.168.X.X:/export/boot/amd64/fedora/33 inst.ks=nsf:192.168.X.X:/export/boot/amd64/fedora/33:/ks/
 
 
 
@@ -200,7 +200,7 @@ sudo nano /etc/exports
 /export       192.168.X.X/24(rw,nohide,insecure,no_subtree_check,async)
 /export/boot 192.168.X.X/24(rw,nohide,insecure,no_subtree_check,async)
 /export/boot/amd64/fedora/33 192.168.X.X/24(rw,nohide,insecure,no_subtree_check,async)
-/export/boot/amd64/fedora/33/kickstart 192.168.2.0/24(rw,nohide,insecure,no_subtree_check,async)
+/export/boot/amd64/fedora/33/kickstart 192.168.X.0/24(rw,nohide,insecure,no_subtree_check,async)
 
 
 #  Export the shared directory
